@@ -31,7 +31,7 @@ That's all to begin working with your new plugin.
 
 **Take a Tea**
 
-+ http://takeatea.com
++ http://www.takeatea.com
 + http://twitter.com/takeatea
 + http://github.com/takeatea
 
