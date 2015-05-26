@@ -1,6 +1,6 @@
-# CLEAN WP HEAD
+# CLEAN WORDPRESS
 
-Remove unnecessary metatags informations from head tag.
+Remove unnecessary metatags informations from head tag, close DB connections, and more.
 
 
 ## Summary
@@ -14,12 +14,12 @@ Remove unnecessary metatags informations from head tag.
 ### 1) Install
 
 **To get started**, download and install the archive into the `wp-content/plugins/` folder.
-Check your new `Clean-WP-head` folder is created in your plugins directory.
+Check your new `clean-wordpress` folder is created in your plugins directory.
 
 
 ### 2) Enable your plugin
 
-Go to your plugins page `your_wp_website/wp-admin/plugins.php`, find the `Clean WP Head` plugin and click on the **Enable** button.
+Go to your plugins page `your_wp_website/wp-admin/plugins.php`, find the `Clean WordPress` plugin and click on the **Enable** button.
 
 
 ### 3) That's all folkes!
