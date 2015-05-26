@@ -1,62 +1,47 @@
 <?php
-/*
- * Plugin Name: Clean WP Head
+/**
+ * Plugin Name: Clean WordPress
  *
- * Description: Remove unnecessary metatags informations from head tag.
+ * Description: Remove unnecessary metatags informations from head tag, close DB connections, and more.
  * Author: Achraf Chouk <ach@takeatea.com>
- * Version: 1.0
+ * Version: 1.2.0 ~ "SOGEKING!" (One Piece)
  *
  * Author URI: http://www.takeatea.com/
  * Plugin URI: http://www.takeatea.com/
  * License: The MIT License (MIT)
  * License URI: http://opensource.org/licenses/MIT
  *
- * @package crewstyle\CleanWPhead
  * @author Achraf Chouk <ach@takeatea.com>
  * @copyright Copyright (c) 2015, Take a tea.
  * @license MIT
+ * @package CleanWordPress\Frontend
+ * @since Clean WordPress 1.2.0
  */
 
-//Check Frontend website
-if (is_admin()) {
-    return;
+if (!defined('ABSPATH')) {
+    die('You are not authorized to directly access to this page');
 }
 
-//Remove automatic feed links since WP v.3.x
-remove_theme_support('automatic-feed-links');
+//Check Back~Frontend website
+if (is_admin()) {
+    include(__DIR__.'/_inc/backend.php');
+} else {
+    include(__DIR__.'/_inc/frontend.php');
+}
 
-//Remove Shortlink Link Rel Hook
-remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
-//Remove i18n styles
-remove_action('wp_head', 'wp_dlmp_l10n_style');
+//-All common hooks--------------------------------------------------------//
 
-//Remove admin bar since v3.1
-add_filter('show_admin_bar', '__return_false');
-remove_action('init', 'wp_admin_bar_init');
-
-//Windows Live Writter support.
-//<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="__SITE_URL__" />
-remove_action('wp_head', 'wlwmanifest_link');
-
-//Really Simple Discovery support.
-//<link rel="EditURI" type="application/rsd+xml" title="RSD" href="__SITE_URL__" />
-remove_action('wp_head', 'rsd_link');
-
-//Link to adjacent posts.
-//<link rel="prev" title="adjacent_posts_rel_link" href="__SITE_URL__" />
-remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-
-//Remove WORDPRESS version.
-//<meta name="generator" content="WordPress __WP_VERSION__" />
-remove_action('wp_head', 'wp_generator');
-
-//Link to blog index.
-//<link rel="index" title="__SITE_NAME__" href="__SITE_URL__" />
-remove_action('wp_head', 'index_rel_link');
-
-//Last actions
-remove_action('wp_head', 'feed_links', 2);
-remove_action('wp_head', 'feed_links_extra', 3);
-remove_action('wp_head', 'parent_post_rel_link', 10, 0);
-remove_action('wp_head', 'start_post_rel_link', 10, 0);
+/**
+ * Close DB connection simply.
+ *
+ * @uses mysql_close() To close all DB connections.
+ *
+ * @since Clean WordPress 1.2.0
+ */
+add_action('shutdown', '_cw_close_db_link', 99);
+function _cw_close_db_link()
+{
+    global $wpdb;
+    unset($wpdb);
+}
