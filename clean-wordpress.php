@@ -3,19 +3,19 @@
  * Plugin Name: Clean WordPress
  *
  * Description: Remove unnecessary metatags informations from head tag, close DB connections, and more.
- * Author: Achraf Chouk <ach@takeatea.com>
- * Version: 1.2.0 ~ "SOGEKING!" (One Piece)
+ * Author: Achraf Chouk <achrafchouk@gmail.com>
+ * Version: 1.3.0 ~ "SOGEKING! - One Piece"
  *
- * Author URI: http://www.takeatea.com/
- * Plugin URI: http://www.takeatea.com/
+ * Author URI: https://github.com/crewstyle
+ * Plugin URI: https://github.com/crewstyle/clean-wordpress
  * License: The MIT License (MIT)
  * License URI: http://opensource.org/licenses/MIT
  *
- * @author Achraf Chouk <ach@takeatea.com>
- * @copyright Copyright (c) 2015, Take a tea.
+ * @author Achraf Chouk <achrafchouk@gmail.com>
+ * @copyright Copyright (c) 20xx, Achraf Chouk.
  * @license MIT
  * @package CleanWordPress\Frontend
- * @since Clean WordPress 1.2.0
+ * @since Clean WordPress 1.3.0
  */
 
 if (!defined('ABSPATH')) {

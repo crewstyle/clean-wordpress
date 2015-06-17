@@ -13,7 +13,7 @@ Remove unnecessary metatags informations from head tag, close DB connections, an
 
 ### 1) Install
 
-**To get started**, download and install the archive into the `wp-content/plugins/` folder.
+**To get started**, download and install the archive into the `wp-content/plugins/` folder.  
 Check your new `clean-wordpress` folder is created in your plugins directory.
 
 
@@ -29,17 +29,13 @@ That's all to begin working with your new plugin.
 
 ### 4) Authors and Copyright
 
-**Take a Tea**
-
-+ http://www.takeatea.com
-+ http://twitter.com/takeatea
-+ http://github.com/takeatea
-
 **Achraf Chouk**
 
 + http://fr.linkedin.com/in/achrafchouk/
 + http://twitter.com/crewstyle
 + http://github.com/crewstyle
 
-Copyright 20xx [Take a tea](http://takeatea.com "Take a tea")
-Brewed by Take a tea ;)
+Please, read [LICENSE](https://github.com/crewstyle/clean-wordpress/blob/master/LICENSE "LICENSE") for more details.
+
+Copyright 20xx [Achraf Chouk](http://github.com/crewstyle "Achraf Chouk").  
+Brewed by Achraf Chouk, served by [Take a tea](http://www.takeatea.com "Take a tea") ;)
