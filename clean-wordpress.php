@@ -4,7 +4,7 @@
  *
  * Description: Remove unnecessary metatags informations from head tag, close DB connections, and more.
  * Author: Achraf Chouk <achrafchouk@gmail.com>
- * Version: 1.3.0 ~ "SOGEKING! - One Piece"
+ * Version: 1.3.1 ~ "Sogeking no shima deeeeeee - One Piece"
  *
  * Author URI: https://github.com/crewstyle
  * Plugin URI: https://github.com/crewstyle/clean-wordpress
@@ -14,8 +14,8 @@
  * @author Achraf Chouk <achrafchouk@gmail.com>
  * @copyright Copyright (c) 20xx, Achraf Chouk.
  * @license MIT
- * @package CleanWordPress\Frontend
- * @since Clean WordPress 1.3.0
+ * @package CleanWordPress
+ * @since Clean WordPress 1.3.1
  */
 
 if (!defined('ABSPATH')) {
