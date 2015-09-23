@@ -3,7 +3,7 @@
  * Backend usefull hooks.
  *
  * @package CleanWordPress\Backend
- * @since Clean WordPress 1.3.1
+ * @since Clean WordPress 1.3.2
  */
 
 if (!defined('ABSPATH')) {
@@ -170,3 +170,31 @@ function _cw_remove_bar_icons()
     $wp_admin_bar->remove_menu('view-site');
 }
 
+
+/**
+ * Disable emojicons introduced with WP 4.2 in backend panel.
+ *
+ * @uses remove_action()
+ * @uses add_filter()
+ *
+ * @since Clean WordPress 1.3.2
+ */
+add_action('init', '_cw_disable_wp_emojicons');
+function _cw_disable_wp_emojicons()
+{
+    //All actions related to emojis
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+
+    //Filter function used to remove the tinymce emoji plugin
+    add_filter('tiny_mce_plugins', '_cw_disable_emojicons_tinymce');
+}
+function _cw_disable_emojicons_tinymce($plugins)
+{
+    if (is_array($plugins)) {
+        return array_diff($plugins, array('wpemoji'));
+    }
+
+    return array();
+}

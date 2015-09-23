@@ -203,3 +203,23 @@ function _cw_shortcode_formatter($content)
 
     return $new_content;
 }
+
+
+/**
+ * Disable emojicons introduced with WP 4.2 in frontend panel.
+ *
+ * @uses remove_action()
+ * @uses add_filter()
+ *
+ * @since Clean WordPress 1.3.2
+ */
+add_action('init', '_cw_disable_wp_emojicons');
+function _cw_disable_wp_emojicons()
+{
+    //All actions related to emojis
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+}
