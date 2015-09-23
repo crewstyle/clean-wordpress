@@ -15,7 +15,7 @@
  * @copyright Copyright (c) 20xx, Achraf Chouk.
  * @license MIT
  * @package CleanWordPress
- * @since Clean WordPress 1.3.4
+ * @since Clean WordPress 1.3.5
  */
 
 if (!defined('ABSPATH')) {
