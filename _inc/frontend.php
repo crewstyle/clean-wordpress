@@ -3,7 +3,7 @@
  * Frontend usefull hooks.
  *
  * @package CleanWordPress\Frontend
- * @since Clean WordPress 1.3.1
+ * @since Clean WordPress 1.3.3
  */
 
 if (!defined('ABSPATH')) {
@@ -222,4 +222,43 @@ function _cw_disable_wp_emojicons()
     remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
     remove_filter('the_content_feed', 'wp_staticize_emoji');
     remove_filter('comment_text_rss', 'wp_staticize_emoji');
+}
+
+
+/**
+ * Remove Yoast SEO version from header.
+ * Special thanks to Trajche Kralev (https://gist.github.com/trajche)
+ *
+ * @uses remove_action()
+ * @uses add_filter()
+ *
+ * @link https://gist.github.com/trajche/9305892
+ * @since Clean WordPress 1.3.3
+ */
+add_action('get_header', 'start_ob');
+add_action('wp_head', 'end_ob', 999);
+function start_ob()
+{
+    ob_start('remove_yoast');
+}
+function end_ob()
+{
+    ob_end_flush();
+}
+function remove_yoast($output)
+{
+    if (defined('WPSEO_VERSION')) {
+        $targets = array(
+            '<!-- This site is optimized with the Yoast WordPress SEO plugin v'.WPSEO_VERSION.' - https://yoast.com/wordpress/plugins/seo/ -->',
+            '<!-- / Yoast WordPress SEO plugin. -->',
+            '<!-- This site uses the Google Analytics by Yoast plugin v'.GAWP_VERSION.' - https://yoast.com/wordpress/plugins/google-analytics/ -->',
+            '<!-- / Google Analytics by Yoast -->',
+        );
+
+        $output = str_ireplace($targets, '', $output);
+        $output = trim($output);
+        $output = preg_replace('/^[ \t]*[\r\n]+/m', '', $output);
+    }
+
+    return $output;
 }
