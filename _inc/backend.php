@@ -1,9 +1,10 @@
 <?php
+
 /**
  * Backend usefull hooks.
  *
  * @package CleanWordPress\Backend
- * @since Clean WordPress 1.3.2
+ * @since Clean WordPress 1.2.0
  */
 
 if (!defined('ABSPATH')) {

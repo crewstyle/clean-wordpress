@@ -1,0 +1,19 @@
+{
+  "name": "crewstyle/clean-wordpress",
+  "type": "wordpress-plugin",
+  "description": "Remove unnecessary metatags informations from head tag, close DB connections, and more. Build with ♥ for WordPress developers.",
+  "keywords": ["wordpress", "plugin", "clean", "php"],
+  "homepage": "https://github.com/crewstyle/clean-wordpress",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Achraf Chouk",
+      "email": "achrafchouk@gmail.com",
+      "homepage": "https://github.com/crewstyle"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "zaininnari/html-minifier": "*"
+  }
+}

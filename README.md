@@ -1,33 +1,29 @@
-# CLEAN WORDPRESS
+# Flexy [![Packagist version](https://img.shields.io/packagist/v/crewstyle/clean-wordpress.svg?style=flat-square)](https://packagist.org/packages/crewstyle/clean-wordpress)
 
-Remove unnecessary metatags informations from head tag, close DB connections, and more.
+_Remove unnecessary metatags informations from head tag, close DB connections, and more._  
 
+---
 
-## Summary
-
-+ [1) Install](#1-install)
-+ [2) Enable your plugin](#2-enable-your-plugin)
-+ [3) That's all folkes!](#3-thats-all-folkes)
-+ [4) Authors and Copyright](#4-authors-and-copyright)
-
-
-### 1) Install
+### Installation
 
 **To get started**, download and install the archive into the `wp-content/plugins/` folder.  
 Check your new `clean-wordpress` folder is created in your plugins directory.
 
+---
 
-### 2) Enable your plugin
+### Enable
 
 Go to your plugins page `your_wp_website/wp-admin/plugins.php`, find the `Clean WordPress` plugin and click on the **Enable** button.
 
+---
 
-### 3) That's all folkes!
+### Enjoy
 
 That's all to begin working with your new plugin.
 
+---
 
-### 4) Authors and Copyright
+### Authors and Copyright
 
 **Achraf Chouk**
 
@@ -35,7 +31,9 @@ That's all to begin working with your new plugin.
 + http://twitter.com/crewstyle
 + http://github.com/crewstyle
 
-Please, read [LICENSE](https://github.com/crewstyle/clean-wordpress/blob/master/LICENSE "LICENSE") for more details.
+Please, read [LICENSE](https://github.com/crewstyle/clean-wordpress/blob/master/LICENSE "LICENSE") for more details.  
+[![MIT](https://img.shields.io/badge/license-MIT_License-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT "MIT")  
 
-Copyright 20xx [Achraf Chouk](http://github.com/crewstyle "Achraf Chouk").  
-Brewed by Achraf Chouk, served by [Take a tea](http://www.takeatea.com "Take a tea") ;)
+---
+
+**Built with ♥ by [Achraf Chouk](http://github.com/crewstyle "Achraf Chouk") ~ (c) since 2015.**
