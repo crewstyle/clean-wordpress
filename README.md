@@ -1,4 +1,4 @@
-# Flexy [![Packagist version](https://img.shields.io/packagist/v/crewstyle/clean-wordpress.svg?style=flat-square)](https://packagist.org/packages/crewstyle/clean-wordpress)
+# Clean WordPress [![Packagist version](https://img.shields.io/packagist/v/crewstyle/clean-wordpress.svg?style=flat-square)](https://packagist.org/packages/crewstyle/clean-wordpress)
 
 _Remove unnecessary metatags informations from head tag, close DB connections, and more._  
 
